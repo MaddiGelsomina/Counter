@@ -1,14 +1,25 @@
-var counter = document.querySelector('.counter');
+let counter = document.querySelector('.counter');
+let counterPlus = document.querySelector('.counter-plus');
+let counterMinus = document.querySelector('.counter-minus');
+
 let count = 0;
 
-function changeCounter(button){
-    if (button == plus){
-        count += 1;
-    }else if(button == minus){
-        if(count > 0){
-        count -= 1;
-        }
-    }
+changeCounter();
 
- counter.innerHTML = count;
-}
+counterPlus.addEventListener("click", () => {
+    count++;
+    changeCounter();
+});
+
+counterMinus.addEventListener("click", () => {
+    if(count > 0){
+        count--;
+    }else if(count = 0){
+        count = 0;
+    }
+    changeCounter();
+});
+
+function changeCounter(){
+    counter.innerHTML = count;
+};
