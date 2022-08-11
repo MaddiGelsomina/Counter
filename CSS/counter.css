@@ -22,7 +22,14 @@ body{
     color: white;
     margin: 10px 0px;
 }
-button{
+.button-container{
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+}
+.button{
     font-size: 20px;
     padding: 10px 20px;
     margin: 10px;
